@@ -21,18 +21,12 @@ A divisão das atividades foi realizada conforme as disciplinas da grade curricu
 ## Rodagem da Aplicação
 Para executar o projeto MVC, somente dar o start na aplicação
 
-1. Execute a classe `SpringMvcApplicationSprintApplication`.
+1. Execute a classe `Main`.
 2. Aguarde a inicialização completa da aplicação.
 3. Abrirá a tela inicial e assim poderá navegar entre as rotas disponíveis de Cliente e Profissional, onde abrirá o index com a opção de Cliente e Profissional
 
 A aplicação está conectada a um banco de dados hospedado na conta do William, utilizando as credenciais presentes no arquivo de configuração. A porta configurada para a aplicação é a **8080**.
 
-## Diagramas
-### Diagrama Relacional
-![Diagrama Relacional](/Documentos/RELATIONAL%20-%20SPRINT%202.png)
-
-### Diagrama de Lógico
-![Diagrama Lógico](Documentos/LOGICAL%20-%20SPRINT%202.png)
 
 ## Link do Vídeo de Apresentação
 - [[Link do Vídeo](https://youtu.be/jjwh-y-2ujY)]
