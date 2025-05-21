@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Histórico de Consultas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fd;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #0066FF;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .voltar {
+      margin-bottom: 20px;
+    }
+
+    .botao {
+      background-color: #0066FF;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 12px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .botao:hover {
+      background-color: #98a3f3;
+    }
+
+    table {
+      width: 100%;
+      background-color: white;
+      border-collapse: collapse;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 16px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #0066FF;
+      color: white;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+
+<a th:href="@{/}" class="voltar">
+  <button type="button" class="botao">← Voltar</button>
+</a>
+
+<h1>Histórico de Consultas</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Data</th>
+    <th>Hora</th>
+    <th>Profissional</th>
+    <th>Status</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>02/05/2025</td>
+    <td>14:30</td>
+    <td>Dra. Marina Lopes</td>
+    <td>Concluída</td>
+  </tr>
+  <tr>
+    <td>15/04/2025</td>
+    <td>10:00</td>
+    <td>Dr. João Silva</td>
+    <td>Cancelada</td>
+  </tr>
+  <tr>
+    <td>20/03/2025</td>
+    <td>09:00</td>
+    <td>Dra. Camila Costa</td>
+    <td>Concluída</td>
+  </tr>
+  <!-- Exemplo dinâmico:
+  <tr th:each="consulta : ${consultas}">
+      <td th:text="${consulta.data}"></td>
+      <td th:text="${consulta.hora}"></td>
+      <td th:text="${consulta.profissional}"></td>
+      <td th:text="${consulta.status}"></td>
+  </tr>
+  -->
+  </tbody>
+</table>
+
+</body>
+</html>

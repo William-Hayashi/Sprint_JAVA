@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Agendamento de Consulta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fd;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #0066FF;
+            text-align: center;
+        }
+
+        .formulario-agendamento {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 16px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        button.botao {
+            margin-top: 24px;
+            background-color: #0066FF;
+            border: none;
+            width: 100%;
+            padding: 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        button.botao:hover {
+            background-color: #98a3f3;
+        }
+
+        .icone-img {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+        }
+
+        .conteudo-botao {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .textos-botao {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .titulo-botao {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .subtitulo-botao {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+<a th:href="@{/area-recompensa}" style="text-decoration: none;">
+    <button type="button" class="botao" style="margin-top: 0px;width: auto; padding: 10px 20px;">
+        ← Voltar
+    </button>
+</a>
+<h1>Agendamento de Consulta</h1>
+
+<form class="formulario-agendamento">
+    <label for="nome">Nome completo:</label>
+    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required>
+
+    <label for="data">Data desejada:</label>
+    <input type="date" id="data" name="data" required>
+
+    <label for="hora">Horário desejado:</label>
+    <input type="time" id="hora" name="hora" required>
+
+    <label for="motivo">Motivo da consulta:</label>
+    <textarea id="motivo" name="motivo" rows="3" placeholder="Descreva o motivo do agendamento..."></textarea>
+
+    <button class="botao">
+        <div class="conteudo-botao">
+            <div class="textos-botao">
+                <span class="titulo-botao">Agendar Consulta</span>
+                <span class="subtitulo-botao">Você receberá a confirmação por e-mail</span>
+            </div>
+        </div>
+    </button>
+
+</form>
+
+</body>
+</html>

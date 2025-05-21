@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{titulo.pagina}">Área de Recompensas</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        header h1 {
+            color: #007bff;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+        }
+
+        .main {
+            display: flex;
+            height: 100%;
+        }
+
+        .sidebar {
+            width: 300px;
+            padding: 40px;
+        }
+
+        .logo {
+            width: 17%;
+        }
+
+        .subtitulo {
+            font-size:20px;
+            color: #005be4;
+            margin-bottom: 30px;
+            white-space: nowrap;
+        }
+
+        .titulo {
+            font-size:30px;
+            color: #005be4;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .botao {
+            display: flex;
+            align-items: center;
+            padding: 20px 18px;
+            margin: 15px 0;
+            border: none;
+            border-radius: 10px;
+            background-color: #f5f5f5;
+            font-size: 20px;
+            width: 200%;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            text-align: left;
+        }
+
+        .botao:hover {
+            background-color: #e0e0e0;
+        }
+
+        .conteudo-botao {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icone-img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .textos-botao {
+            display: flex;
+            flex-direction: column;
+            white-space: nowrap;
+        }
+
+        .titulo-botao {
+            font-weight: bold;
+            font-size: 22px;
+            color: #4B4B4B;
+        }
+
+        .subtitulo-botao {
+            font-size: 15px;
+            color: #4B4B4B;
+            font-weight: lighter;
+        }
+
+        .conteudo {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://cdn.cookielaw.org/logos/eb9821cf-1be6-4c88-9a2f-a63cbf4415df/c73d8369-4a89-4de1-914b-8712099272eb/1d3bd8ba-1a59-4112-b6d0-1a2c029950ee/Logo_OdontoPrev.jpg" class="logo">
+</header>
+
+<div class="main">
+    <div class="sidebar">
+        <div class="titulo" th:text="#{titulo.header}">Área De Recompensas</div>
+        <div class="subtitulo" th:text="#{subtitulo.header}">Feito para você</div>
+
+        <a th:href="@{/agendamento}" style="text-decoration: none;">
+            <button class="botao">
+                <div class="conteudo-botao">
+                    <img src="https://images.icon-icons.com/2427/PNG/512/calendar_icon_147026.png" alt="Ícone calendário" class="icone-img">
+                    <div class="textos-botao">
+                        <span class="titulo-botao" th:text="#{botao.agendamento}">Agendamento</span>
+                        <span class="subtitulo-botao" th:text="#{subbotao.agendamento}">Agende hoje a sua consulta</span>
+                    </div>
+                </div>
+            </button>
+        </a>
+        <a th:href="@{/recompensas}" style="text-decoration: none;">
+            <button class="botao">
+                <div class="conteudo-botao">
+                    <img src="https://www.citypng.com/public/uploads/preview/blue-line-outline-gift-box-icon-transparent-png-701751695037177l9r5beahvn.png" class="icone-img"/>
+                    <div class="textos-botao">
+                        <span class="titulo-botao" th:text="#{botao.recompensas}">Recompensas</span>
+                        <span class="subtitulo-botao" th:text="#{subbotao.recompensas}">Visualize as recompensas</span>
+                    </div>
+                </div>
+            </button>
+        </a>
+
+        <a th:href="@{/historico}" style="text-decoration: none;">
+            <button class="botao">
+            <div class="conteudo-botao">
+                <img src="https://cdn.pixabay.com/photo/2015/12/08/18/19/clock-1083479_1280.png" alt="Ícone histórico" class="icone-img">
+                <div class="textos-botao">
+                    <span class="titulo-botao" th:text="#{botao.historico}">Histórico</span>
+                    <span class="subtitulo-botao" th:text="#{subbotao.historico}">Veja suas últimas consultas</span>
+                </div>
+            </div>
+        </button>
+        </a>
+        <button class="botao">
+            <div class="conteudo-botao">
+                <img src="https://icons.veryicon.com/png/o/education-technology/blue-gray-solid-blend-icon/artificial-intelligence-5.png" alt="Ícone IA" class="icone-img">
+                <div class="textos-botao">
+                    <span class="titulo-botao" th:text="#{botao.ia}">Consulta IA</span>
+                    <span class="subtitulo-botao" th:text="#{subbotao.ia}">Realize agora sua consulta</span>
+                </div>
+            </div>
+        </button>
+    </div>
+
+    <div class="conteudo">
+        <!-- Conteúdo da área logada pode ir aqui futuramente -->
+    </div>
+</div>
+
+</body>
+</html>

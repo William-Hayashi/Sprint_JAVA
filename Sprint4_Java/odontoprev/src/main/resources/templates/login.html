@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br" th:lang="${#locale}">
+<head>
+    <title th:text="#{login.title}">Login</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #005bea, #00c6fb);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            width: 320px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        input {
+            margin: 10px 0;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        button {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .erro {
+            color: red;
+            margin-top: 10px;
+        }
+        .sucesso {
+            color: green;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+<div class="container">
+    <h2 th:text="#{login.title}">Login</h2>
+
+    <!-- Mensagem de erro -->
+    <p th:if="${erro}" class="erro" th:text="${erro}">Mensagem de erro aqui</p>
+
+    <!-- Formulário de login -->
+    <form method="post" action="/login">
+        <input type="text" name="usuario" th:placeholder="#{login.username}" required/>
+        <input type="password" name="senha" th:placeholder="#{login.password}" required/>
+
+        <div class="buttons">
+            <button type="submit" th:text="#{login.enter}">Entrar</button>
+            <button type="button" th:text="#{login.register}" onclick="window.location.href='/cadastro'">Cadastre-se</button>
+        </div>
+    </form>
+
+    <!-- Link para cadastro -->
+    <p>
+        <span th:text="#{login.noAccount}">Não tem login? Cadastre-se</span>
+    </p>
+</div>
+
+<!-- SweetAlert: Apenas exibe se houver mensagem -->
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    var mensagem = /*[[${mensagem}]]*/ null;
+    if (mensagem !== null && mensagem.trim() !== "") {
+        Swal.fire({
+            icon: 'success',
+            title: /*[[#{login.registerSuccessTitle}]]*/ 'Cadastro realizado!',
+            text: mensagem,
+            showConfirmButton: false,
+            timer: 1500
+        });
+    }
+    /*]]>*/
+</script>
+
+</body>
+</html>
