@@ -23,9 +23,9 @@ Para executar o projeto MVC, somente dar o start na aplicação
 
 1. Execute a classe `Main`.
 2. Aguarde a inicialização completa da aplicação.
-3. Abrirá a tela inicial e assim poderá navegar entre as rotas disponíveis de Cliente e Profissional, onde abrirá o index com a opção de Cliente e Profissional
+3. Abrirá a tela inicial e assim poderá navegar entre as rotas disponíveis de Usuário
 
-A aplicação está conectada a um banco de dados hospedado na conta do William, utilizando as credenciais presentes no arquivo de configuração. A porta configurada para a aplicação é a **8080**.
+A aplicação está conectada a um banco de dados hospedado na conta do William, utilizando as credenciais presentes no arquivo de configuração. A porta configurada para a aplicação é a **8081**.
 
 
 ## Link do Vídeo de Apresentação
